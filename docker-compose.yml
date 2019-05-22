@@ -1,0 +1,11 @@
+pluginDev:
+  image: node-ui-test
+  command: -t
+  volumes:
+    - ../test:/opt/app/current/test
+pluginJenkins:
+  image: node-ui-test
+  command: -j
+  volumes:
+      - ../mochawesome-report:/opt/app/current/mochawesome-report
+      - ../screenshots:/opt/app/current/screenshots
